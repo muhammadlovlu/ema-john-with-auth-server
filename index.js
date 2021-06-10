@@ -13,6 +13,12 @@ const app = express()
 app.use(cors());
 app.use(bodyParser.json());
 
+
+
+app.get('/',(req,res)=>{
+    res.send('Working properly')
+})
+
 client.connect(err => {
   const productsCollection = client.db("emaJohnStore").collection("products");
   const ordersCollection = client.db("emaJohnStore").collection("orders");
